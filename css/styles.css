@@ -1,0 +1,311 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Muli', sans-serif; }
+
+/*
+    Bloques
+*/
+.cabecera {
+  width: 100%;
+  min-height: 700px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-image: url("../images/fondoCabecera.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%; }
+
+.subCabecera {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: white; }
+  .subCabecera__titulo {
+    margin-top: 80px;
+    font-size: 2em; }
+  .subCabecera__menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+    margin-top: 80px; }
+
+.titulo {
+  font-size: 3.5em;
+  margin-top: 40px;
+  color: white;
+  margin-left: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  text-shadow: 2px 2px 4px #000000; }
+
+.more {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center; }
+
+.frase {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 40px;
+  width: 60%; }
+  .frase__cita {
+    font-size: 2em;
+    font-style: italic; }
+  .frase__autor {
+    font-size: 2em;
+    -ms-flex-item-align: end;
+        align-self: flex-end; }
+
+.principal {
+  width: 100%;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .principal h2 {
+    margin-top: 30px;
+    font-size: 3em;
+    font-weight: bold;
+    color: #FF6324; }
+
+.more-visited {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 100%;
+  margin: 0;
+  margin-top: 60px;
+  background: rgba(0, 0, 0, 0.8); }
+  .more-visited__slider {
+    width: 90%;
+    height: 700px;
+    margin: auto;
+    position: relative;
+    list-style: none;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+    .more-visited__slider img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      -webkit-transition: all 0.7s;
+      transition: all 0.7s;
+      border-radius: 10px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+    .more-visited__slider h2 {
+      opacity: 0;
+      position: absolute;
+      bottom: 100px;
+      left: 0;
+      width: 100%; }
+      .more-visited__slider h2 span {
+        color: white;
+        font-size: 1.6em;
+        font-family: 'Muli', sans-serif;
+        letter-spacing: -1px;
+        background: black;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 10px; }
+        .more-visited__slider h2 span a {
+          text-decoration: none;
+          color: white; }
+          .more-visited__slider h2 span a:hover {
+            color: #FF6324; }
+    .more-visited__slider input[type="radio"] {
+      position: relative;
+      z-index: 50;
+      margin: 10px;
+      width: 80px;
+      height: 20px; }
+    .more-visited__slider input[type="radio"]:checked ~ img {
+      opacity: 1; }
+    .more-visited__slider input[type="radio"]:checked ~ h2 {
+      opacity: 1; }
+
+.footer {
+  width: 100%;
+  min-height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(white));
+  background: linear-gradient(rgba(0, 0, 0, 0.8), white); }
+  .footer__map {
+    width: 100%;
+    margin-top: 50px; }
+
+/*
+    Elementos
+*/
+.menu__items {
+  margin-right: 25px;
+  font-size: 1.5em; }
+  .menu__items a {
+    text-decoration: none;
+    color: white; }
+    .menu__items a:hover {
+      color: #FF6324;
+      cursor: pointer; }
+
+.more__enlace {
+  margin-top: 20px;
+  font-size: 2em;
+  color: white;
+  text-decoration: none;
+  text-shadow: 2px 2px 4px #000000;
+  border-bottom: 1px dashed white; }
+  .more__enlace:hover {
+    color: #FF6324;
+    cursor: pointer; }
+  .more__enlace--info {
+    color: #FF6324;
+    text-shadow: none;
+    border-bottom: 1px dashed #FF6324; }
+    .more__enlace--info:hover {
+      color: black;
+      cursor: pointer; }
+
+.principal__categorias {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-left: 20px; }
+  .principal__categorias__history, .principal__categorias__instruments, .principal__categorias__musicians {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 25%; }
+    .principal__categorias__history h3, .principal__categorias__instruments h3, .principal__categorias__musicians h3 {
+      text-align: center; }
+    .principal__categorias__history img, .principal__categorias__instruments img, .principal__categorias__musicians img {
+      -ms-flex-item-align: center;
+          align-self: center;
+      width: 200px;
+      height: 180px;
+      border-radius: 50%; }
+
+.footer__contacto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 40px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+  .footer__contacto__marca {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .footer__contacto__marca span {
+      font-size: 2em;
+      color: black; }
+    .footer__contacto__marca p {
+      font-size: 1em; }
+  .footer__contacto__otros {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 40%; }
+    .footer__contacto__otros .menu {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      list-style: none; }
+      .footer__contacto__otros .menu li {
+        margin-bottom: 10px; }
+      .footer__contacto__otros .menu a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.2em; }
+        .footer__contacto__otros .menu a:hover {
+          color: #FF6324; }
+    .footer__contacto__otros .correo {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+      .footer__contacto__otros .correo p {
+        margin-bottom: 5px;
+        font-size: 1.2em; }
+
+/*
+    Modificadores
+*/
