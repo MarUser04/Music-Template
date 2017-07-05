@@ -21,7 +21,17 @@ body{
     flex-direction: column;
     background-image: url('../images/fondoCabecera.jpg');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100% 700px;
+
+    @media (max-width: 630px){
+        min-height: 800px;
+        background-size: 100% 800px;
+    }
+
+    @media(max-width: 500px){
+        min-height: 750px;
+        background-size: 100% 750px;
+    }
 }
 
 .subCabecera{
@@ -38,6 +48,12 @@ body{
         display: flex;
         list-style: none;
         margin-top: 80px;
+
+        @media(max-width: 600px){
+            flex-direction: column;
+            justify-content: center;
+            align-items: center
+        }
     }
 }
 
@@ -49,6 +65,16 @@ body{
     display: flex;
     align-self: center; 
     text-shadow: 2px 2px 4px #000000;
+
+
+        @media(max-width: 880px){
+            font-size: 3em;
+            text-align: center;
+        }
+
+        @media(max-width: 500px){
+            font-size: 2em;
+        }
 }
 
 .more{
@@ -74,6 +100,22 @@ body{
         font-size: 2em;
         align-self: flex-end;
     }
+
+    @media(max-width: 960px){
+        width: 80%;
+        text-align: center;
+    }
+
+    @media(max-width: 500px){
+        width: 95%;
+        text-align: center;
+        &__cita{
+            font-size: 1.5em;
+        }
+        &__autor{
+            font-size: 1.5em;
+        }
+    }
     
 }
 
@@ -94,6 +136,7 @@ body{
         font-weight: bold;
         color: $colorNaranja;
     }
+
 }
 
 .more-visited{
@@ -161,6 +204,8 @@ body{
                 background: rgba(0, 0, 0, 0.8%);
 
                 padding: 10px;
+
+               
             }
         }
 
@@ -177,6 +222,29 @@ body{
         }
          input[type="radio"]:checked ~h2{
             opacity: 1;
+        }
+    }
+
+     @media(max-width: 600px){
+              &__slider{
+                  height: 600px;
+                  h2{
+                      font-size: 2em;
+                  }
+              }
+    }
+
+    @media(max-width:420px){
+        
+        &__slider{
+            //width: 85%;
+            height: 500px;
+
+            input[type="radio"]{
+                width: 70px;
+                margin: 5px;
+                height: 15px;
+            }
         }
     }
 }
@@ -263,6 +331,19 @@ body{
             border-radius: 50%;
         }
     }
+
+
+    @media(max-width: 860px){
+        flex-direction: column;
+    justify-content: center;
+            align-items: center;
+        &__history, &__instruments, &__musicians{
+            width: 80%;
+            font-size: 1.2em;
+            text-align: center;
+           
+        }
+    }
 }
 
 
@@ -315,7 +396,38 @@ body{
                 font-size: 1.2em;
             }
         }
+           @media(max-width: 1060px){
+        flex-direction: column;
     }
+    }
+
+    @media(max-width:1060px){
+        margin-top: 20px;
+        justify-content: space-between;
+        margin-left: 15%;
+    }
+    @media(max-width:640px){
+        margin-left: 5%;
+    }
+    @media(max-width:540px){
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__marca{
+            text-align: center;
+        }
+        &__otros{
+            width: 80%;
+            text-align: center;
+
+            .menu{
+                margin-right: 20px;
+            }
+        }
+    }
+
+ 
 }
 
 

@@ -22,7 +22,15 @@ body {
           flex-direction: column;
   background-image: url("../images/fondoCabecera.jpg");
   background-repeat: no-repeat;
-  background-size: 100%; }
+  background-size: 100% 700px; }
+  @media (max-width: 630px) {
+    .cabecera {
+      min-height: 800px;
+      background-size: 100% 800px; } }
+  @media (max-width: 500px) {
+    .cabecera {
+      min-height: 750px;
+      background-size: 100% 750px; } }
 
 .subCabecera {
   display: -webkit-box;
@@ -40,6 +48,18 @@ body {
     display: flex;
     list-style: none;
     margin-top: 80px; }
+    @media (max-width: 600px) {
+      .subCabecera__menu {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; } }
 
 .titulo {
   font-size: 3.5em;
@@ -52,6 +72,13 @@ body {
   -ms-flex-item-align: center;
       align-self: center;
   text-shadow: 2px 2px 4px #000000; }
+  @media (max-width: 880px) {
+    .titulo {
+      font-size: 3em;
+      text-align: center; } }
+  @media (max-width: 500px) {
+    .titulo {
+      font-size: 2em; } }
 
 .more {
   margin-top: 30px;
@@ -84,6 +111,18 @@ body {
     font-size: 2em;
     -ms-flex-item-align: end;
         align-self: flex-end; }
+  @media (max-width: 960px) {
+    .frase {
+      width: 80%;
+      text-align: center; } }
+  @media (max-width: 500px) {
+    .frase {
+      width: 95%;
+      text-align: center; }
+      .frase__cita {
+        font-size: 1.5em; }
+      .frase__autor {
+        font-size: 1.5em; } }
 
 .principal {
   width: 100%;
@@ -175,6 +214,18 @@ body {
       opacity: 1; }
     .more-visited__slider input[type="radio"]:checked ~ h2 {
       opacity: 1; }
+  @media (max-width: 600px) {
+    .more-visited__slider {
+      height: 600px; }
+      .more-visited__slider h2 {
+        font-size: 2em; } }
+  @media (max-width: 420px) {
+    .more-visited__slider {
+      height: 500px; }
+      .more-visited__slider input[type="radio"] {
+        width: 70px;
+        margin: 5px;
+        height: 15px; } }
 
 .footer {
   width: 100%;
@@ -249,6 +300,22 @@ body {
       width: 200px;
       height: 180px;
       border-radius: 50%; }
+  @media (max-width: 860px) {
+    .principal__categorias {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .principal__categorias__history, .principal__categorias__instruments, .principal__categorias__musicians {
+        width: 80%;
+        font-size: 1.2em;
+        text-align: center; } }
 
 .footer__contacto {
   display: -webkit-box;
@@ -305,6 +372,41 @@ body {
       .footer__contacto__otros .correo p {
         margin-bottom: 5px;
         font-size: 1.2em; }
+    @media (max-width: 1060px) {
+      .footer__contacto__otros {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; } }
+  @media (max-width: 1060px) {
+    .footer__contacto {
+      margin-top: 20px;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      margin-left: 15%; } }
+  @media (max-width: 640px) {
+    .footer__contacto {
+      margin-left: 5%; } }
+  @media (max-width: 540px) {
+    .footer__contacto {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .footer__contacto__marca {
+        text-align: center; }
+      .footer__contacto__otros {
+        width: 80%;
+        text-align: center; }
+        .footer__contacto__otros .menu {
+          margin-right: 20px; } }
 
 /*
     Modificadores
